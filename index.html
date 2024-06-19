@@ -57,13 +57,66 @@
             background: rgb(205, 233, 245);
             transition: .5s;
         }
-
+        .checkbtn{
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        nav ul li a{
+            font-size: 16px;
+        }
+        @media (max-width:858px){
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: greenyellow;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a.hover,a.Active{
+                background: none;
+                color: black;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        selection{
+            background-size: cover;
+            height: calc(100vh - 80px);
+        }
     </style>
     <h1>Enter Site Title</h1>
     <h4>Enter Site Slogan</h4>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
         <ul>
             <li><a class="Active" href="#">Home</a></li>
             <li><a class="Active" href="#">New Page</a></li>
@@ -73,5 +126,6 @@
             <li><a class="Active" href="#">New Page 5</a></li>
         </ul>
     </nav>
+    <selection></selection>
 </body>
 </html>
