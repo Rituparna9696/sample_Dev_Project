@@ -49,7 +49,13 @@
         nav ul li a{
             color: rgb(3, 3, 44);
             font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
             text-transform: capitalize;
+        }
+        a.Active,a:hover{
+            background: #1b9bff;
+            transition: .5s;
         }
 
     </style>
@@ -59,12 +65,12 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">New Page</a></li>
-            <li><a href="#">New Page 2</a></li>
-            <li><a href="#">New Page 3</a></li>
-            <li><a href="#">New Page 4</a></li>
-            <li><a href="#">New Page 5</a></li>
+            <li><a class="Active" href="#">Home</a></li>
+            <li><a class="Active" href="#">New Page</a></li>
+            <li><a class="Active" href="#">New Page 2</a></li>
+            <li><a class="Active" href="#">New Page 3</a></li>
+            <li><a class="Active" href="#">New Page 4</a></li>
+            <li><a class="Active" href="#">New Page 5</a></li>
         </ul>
     </nav>
 </body>
