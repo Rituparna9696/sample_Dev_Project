@@ -5,269 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style type="text/css">
-        *{
-            padding: 0;
+       body{
             margin: 0;
-            text-decoration: none;
-            list-style: none;
-            box-sizing: border-box;
-        }
-        h1{
-            background-color: greenyellow;
-            border: 0px;
-            margin: 0px;
-            text-align:right;
-            line-height: 80px;
-            padding: 0 100px;
-        }
-        h4{
-            background-color: greenyellow;
-            border: 0px;
-            margin: 0px;
-            text-align: right;
-            line-height: 20px;
-            padding: 0 100px;
-            text-decoration: solid;
-        }
-        body{
+            padding: 0;
+            background-color: #e0d48a;
             font-family: Arial, Helvetica, sans-serif;
         }
-        nav{
-            background: rgb(188, 212, 240);
-            height: 80px;
+        #wrapper{
+            margin: 20px auto;
+            width: 1100px;
+            height: auto;
+        }
+        #banner{
             width: 100%;
+            height: 330px;
+            background-image: url(images/banner.png);
+            border: 1px solid #b8ab88;
         }
-        nav ul{
-            float: right;
-            margin-right: 20px;
+        #banner h1{
+            margin: 0;
+            padding: 9% 13% 0 0;
+            text-align: right;
+            font-size: 42px;
         }
-        nav ul li{
-            display: inline-block;
-            line-height: 80px;
-            margin: 0 5px;
+        #banner p{
+            margin: 0;
+            padding: 1% 25% 0 0;
+            text-align: right;
+            font-size: 20px;
         }
-        nav ul li a{
-            color: rgb(3, 3, 44);
-            font-size: 17px;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: capitalize;
+        .main{
+            margin-top: 10px;
+            padding: 12px 14px 0 11px;
+            width: 1076px;
+            height: 723px;
+            background-image: url(images/pbaxk.png) ;
         }
-        a.Active,a:hover{
-            background: rgb(205, 233, 245);
-            transition: .5s;
+        .menu{
+            width: 1076px;
+            height: 55px;
+            background-color: #eae6cb;
+            border: 2px solid #b8ab88;
+            border-bottom: none;
         }
-        .checkbtn{
-            font-size: 30px;
-            color: white;
-            float: right;
-            line-height: 80px;
-            margin-right: 40px;
-            cursor: pointer;
-            display: none;
-        }
-        #check{
-            display: none;
-        }
-        nav ul li a{
-            font-size: 16px;
-        }
-        @media (max-width:858px){
-            .checkbtn{
-                display: block;
-            }
-            ul{
-                position: fixed;
-                width: 100%;
-                height: 100vh;
-                background: rgb(187, 219, 248);
-                top: 80px;
-                left: -100%;
-                text-align: center;
-                transition: all .5s;
-            }
-            nav ul li{
-                display: block;
-                margin: 50px 0;
-                line-height: 30px;
-            }
-            nav ul li a{
-                font-size: 20px;
-            }
-            a.hover,a.Active{
-                background: none;
-                color: black;
-            }
-            #check:checked ~ ul{
-                left: 0;
-            }
-        }
-        selection{
-            background-size: cover;
-            height: calc(100vh - 80px);
-        }
-        *{
+        .menu ul{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+        .menu ul li{
             list-style: none;
-            text-decoration: none;
-        }
-        body{
-            background: #f3f5f9;
-        }
-        .wrapper{
-            display: flex;
-            position: relative;
-        }
-        .wrapper.sidebar{
-            position: fixed;
-            width: 200px;
-            height: 100%;
-            background: rgb(248, 248, 190);
-            padding: 30px 0;
-        }
-        .wrapper.sidebar h2{
-            color: black;
-            text-transform: capitalize;
+            float: left;
+            width: 173px;
+            height: 33px;
             text-align: center;
-            margin-bottom: 30px;
-            margin-top: 0;
+
         }
-        .wrapper.sidebar ul li{
-            padding: 15px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            border-top: 1px solid rgba(225,225,225,0.05);
-        }
-        .wrapper.sidebar ul li a{
-            color: #0d0d0e;
+        .menu ul li a{
+            padding: 17px 0 0 0;
             display: block;
-            background-color: white;
+            color: #284040;
+            text-decoration: none;
+            font-size: 20px;
         }
-        .wrapper.sidebar ul li a .fa{
-            width: 25px;
+        .content{
+            margin-top: 15px;
+            width: 1076px;
+            height: 300px;
         }
-        .wrapper.sidebar ul li:hover{
-            background: rgb(184, 243, 187);
+        .left-content{
+            width: 300px;
+            height: 300px;
+            float: left;
         }
-        .wrapper.sidebar ul li:hover a{
-            color: black;
+        .right-content{
+            width: 746px;
+            height: 300px;
+            float: right;
         }
-        .wrapper{
-            display: flex;
-            position: relative;
-        }
-        .wrapper.sidebar{
-            position: fixed;
-            width: 200px;
-            height: 100%;
-            background: rgb(248, 248, 190);
-            padding: 30px 0;
-        }
-        body{
-            padding: 0;
-            margin: 0;
-        }
-        .wrapper{
-            position: absolute;
-            width: 90%;
-            transform: translate(0,-50%);
-            top: 50%;
-        }
-        h2{
-            writing-mode: horizontal-tb;
-            display: inline;
-            background-color: yellowgreen;
-            color:black;
-            padding: 15px;
-            top: 50%;
-        }
-        p{
-            display: inline;
-            position: absolute;
-            top: 0;
-            margin: 0;
-            text-align: justify;
-            letter-spacing: 0.6px;
-        }
-        h2{
-            writing-mode: horizontal-tb;
-            display: inline;
-            color:black;
-            padding: 15px;
-            top: 50%;
-        }
-        p{
-            display: inline;
-            position: absolute;
-            top: 0;
-            margin: 0;
-            text-align: justify;
-            letter-spacing: 0.6px;
-        }
-        h2{
-            writing-mode: horizontal-tb;
-            display: inline;
-            color:black;
-            padding: 15px;
-            top: 50%;
-        }
-        p{
-            display: inline;
-            position: absolute;
-            top: 0;
-            margin: 0;
-            text-align: justify;
-            letter-spacing: 0.6px;
-        }
-        h2{
-            writing-mode: horizontal-tb;
-            display: inline;
-            color:black;
-            padding: 15px;
-            top: 50%;
-        }
-        p{
-            display: inline;
-            position: absolute;
-            top: 0;
-            margin: 0;
-            text-align: justify;
-            letter-spacing: 0.6px;
-        }
-        button{
-            writing-mode: horizontal-tb;
-            display: inline;
-            background-color: yellowgreen;
-            color:black;
-            padding: 15px;
-            top: 50%;
-        }
+        .page-footer{
+            width: 1076px;
+            height: 55px;
+            background-color: #cbde50;
+        } 
     </style>
-    <h1>Enter Site Title</h1>
-    <h4>Enter Site Slogan</h4>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    
+    
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-            <li><a class="Active" href="#">Home</a></li>
-            <li><a class="Active" href="#">New Page</a></li>
-            <li><a class="Active" href="#">New Page 2</a></li>
-            <li><a class="Active" href="#">New Page 3</a></li>
-            <li><a class="Active" href="#">New Page 4</a></li>
-            <li><a class="Active" href="#">New Page 5</a></li>
-        </ul>
-    </nav>
-    <selection></selection>
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Main Menu</h2>
+    <div id="wrapper">
+        <div id="banner">
+            <h1>Enter Site Title</h1>
+            <p>Enter Site Slogan</p>
+    
+        </div>
+    </div>
+    <section class="main">
+        <nav class="menu">
+            <ul>
+                <li><a class="Active" href="#">Home</a></li>
+                <li><a class="Active" href="#">New Page</a></li>
+                <li><a class="Active" href="#">New Page 2</a></li>
+                <li><a class="Active" href="#">New Page 3</a></li>
+                <li><a class="Active" href="#">New Page 4</a></li>
+                <li><a class="Active" href="#">New Page 5</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="content">
+        <section class="top-left-content">
+            <h1>Main Menu</h1>
             <ul>
                 <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 1</a></li>
                 <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 2</a></li>
@@ -278,38 +124,43 @@
                 <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 7</a></li>
                 <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 8</a></li>
             </ul>
-        </div>
-        
-    </div>
-    <br>
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Block</h2>
+        </section>     
+        <section class="bottom-left-content">
+            <h1>Block</h1>
             <p>Enter block content here....
                 
                 Lorem ipsum dolor sit amet,
                 consectetuer adipiscing elit.
                 Aenean commodo lorem ipsum dolor sit amet,
                 consectetuer adipiscing elit.Aenean commodo</p>
-        </div>
-    </div>
-    <br>
-    <div class="wrapper">
+        </section>
+        <section class="top-right-content">
+    
         <h2>Gallery</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aspernatur consectetur dolores? Fugiat explicabo doloremque maxime velit deserunt veritatis eum eveniet natus illum sapiente quos minima facere, voluptates corporis tempora, iusto ullam officiis eos adipisci est neque recusandae eius rerum? Minima unde error architecto reprehenderit sunt rem recusandae dicta qui debitis, alias ut, harum fugiat laudantium molestiae nisi fuga natus accusamus ad doloribus aut nam? Ipsum dignissimos quisquam delectus perferendis voluptatem velit blanditiis iusto ipsa autem sed libero, temporibus consectetur.</p>
-    </div>
-    <br>
-    <div class="wrapper">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam Felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, ringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper misi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p>
+        </section>
+        
+        <section class="bottom-right-content">
         <h2>Subscription</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis possimus doloribus ex nemo tempora consectetur corporis maxime, natus earum, quo veniam facilis, exercitationem error distinctio molestias dolor! Officiis obcaecati nobis nemo laudantium voluptatem, aut itaque mollitia. Qui expedita ipsum a!
+        <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+            id, lorem. Maecenas nec odio et ant
         </p>
         <button type="Read More">Read More</button>
-    </div>
-    <br>
-    <div class="wrapper">
+    
         <h2>Other Services</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, facere quo expedita numquam tempore velit quisquam harum cum magni adipisci excepturi fugit? Sunt voluptates iste ullam possimus exercitationem nostrum officiis. Qui animi vitae ea non corrupti, ipsum veniam eius magnam!</p>
+        <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+            id, lorem. Maecenas nec odio et ant</p>
+        
+    </section>
+    <section class="bottom-left-button">
         <button type="Read More">Read More</button>
-    </div>
+    </section>
+    <section class="bottom-right-button">
+        <button type="Read More">Read More</button>
+    </section>
+    <footer class="page-footer">
+        <p>Copyright &copy; 2014.</p>
+    </footer>
+    </section>
 </body>
 </html>
