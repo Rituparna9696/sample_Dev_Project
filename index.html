@@ -4,222 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style type="text/css">
-       body{
-            margin: 0;
-            padding: 0;
-            background-color: #e0d48a;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #wrapper{
-            margin: 20px auto;
-            width: 1100px;
-            height: auto;
-        }
-        #banner{
-            width: 100%;
-            height: 330px;
-            background-image: url(images/banner.png);
-            border: 1px solid #b8ab88;
-        }
-        #banner h1{
-            margin: 0;
-            padding: 9% 13% 0 0;
-            text-align: right;
-            font-size: 42px;
-        }
-        #banner p{
-            margin: 0;
-            padding: 1% 25% 0 0;
-            text-align: right;
-            font-size: 20px;
-        }
-        .main{
-            margin-top: 10px;
-            padding: 12px 14px 0 11px;
-            width: 1166px;
-            height: 723px;
-            background-image: url(images/pbaxk.png) ;
-        }
-        
-        .menu{
-            width: 1076px;
-            height: 55px;
-            background-color: #eae6cb;
-            border: 2px solid #b8ab88;
-            border-bottom: none;
-        }
-        .menu ul{
-            margin: 0;
-            padding: 0;
-        }
-        .menu ul li{
-            list-style: none;
-            float: left;
-            width: 173px;
-            height: 33px;
-            text-align: center;
-
-        }
-        .menu ul li a{
-            padding: 17px 0 0 0;
-            display: block;
-            color: #284040;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        .content{
-            margin-top: 15px;
-            width: 1076px;
-            height: 300px;
-        }
-        .top-left-content{
-            list-style-image:url(images/icon.png);
-            width: 300px;
-            height:300px;
-            float: left;
-            background-color: #f0e8c3;
-        }
-        .top-left-content h1{
-            list-style-image: url(images/icon1.png);
-            background-color: #d2d35e;
-            display: block;
-            font-size: 1.5em;
-            margin-block-start: 0.83em;
-            margin-block-end: 0.83em;   
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-            unicode-bidi: isolate;
-        }
-        body{
+    <style>
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ece1ad;
         }
+       .main-box {
+         margin-top:2% ;
+         margin-bottom:2%;
+         margin-left:10%;
+         margin-right:10%;
+        }
         
-        .bottom-left-content{
-            width: 300px;
-            height: 300px;
-            float: left;
+        .header {
+          background-color: #b3f35a;
+          padding-top:3% ;
+          padding-bottom: 5%;
+          padding-left: 72% ;
+          border-radius: 15px 0 15px 0;
         }
-        .bottom-left-content h1{
-            list-style-image: url(images/icon1.png);
-            background-color: #d2d35e;
-            padding: 14px 0 0 0; 
+
+        .nav {
+            background-color: #e8ddba;
+            padding: 10px 0;
+            border: 1px solid rgb(206, 160, 160);
+            border-bottom: none;
         }
-        .bottom-left-content p{
-            display:inline;
-            position:absolute;
-            margin: 16px;
+
+        .nav ul {
+            list-style-type: none;
             padding: 0;
-            border: 0;
-            text-align: justify;
         }
-        .top-right-content{
-            width: 746px;
-            height: 300px;
-            float: right;
+
+        .nav ul li {
+            display: inline;
+            /* margin-left: 53px; */
+            margin-left: 6%;
         }
-        .bottom-right-content{
-            width: 746px;
-            height: 300px;
-            float: right;
+
+        .nav ul li a {
+            text-decoration: none;
+            color: rgb(14, 56, 14);
+            padding: 5px 15px;
+            font-weight: 550;   
         }
-        .bottom-right-left-content {
-            width: 746px;
-            height: 300px;
-            float:left;
-            
+
+        .nav ul li a:hover {
+            background-color: #d4c28d;
         }
-        .bottom-right-right-content{
-            width: 746px;
-            height: 300px;
-            float: right;
-            
+
+        .container {
+            display: flex;
+            padding: 20px;
         }
-        .page-footer{
+
+        .sidebar {
+            width: 20%;
+        }
+
+        .menu, .block {
+            background-color: #d3dc8e;
+            border: #88c238 1px solid;
+            border-radius: 0px 10px 0px 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .menu h2, .block h2 {
+            margin: 0 0 10px;
+        }
+
+        .menu ul li {
+            margin-bottom: 5px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            width: 80%;
+            padding-left: 20px;
+        }
+        .sub-content{
+            display: flex;
+        }
+
+        .content{
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            margin: 0 0 10px;
+        }
+        .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8dc63f;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .read-more:hover {
+            background-color: #d45e0f;
+        }
+        .footer {
             background-color: #a9d46e;
             text-align: center;
-            padding: 1px 5px 0 0;
-            width: 1076px;
-            height: 55px;
-        } 
+            padding: 10px;
+        }
+
+
+
     </style>
-    
-    
 </head>
 <body>
-    <div id="wrapper">
-        <div id="banner">
-            <h1>Enter Site Title</h1>
-            <p>Enter Site Slogan</p>
-    
+    <fieldset class="main-box">
+    <div class="header">
+        <h1>Enter Site Title</h1>
+        <p>Enter Site Slogan</p>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./table.html">Table</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="./form.html">Form</a></li>
+            <li><a href="#">Contact-Us</a></li>
+            
+        </ul>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="menu">
+                <h2>Main Menu</h2>
+                <ul>
+                    <li><a href="#">Menu Item 1</a></li>
+                    <li><a href="#">Menu Item 2</a></li>
+                    <li><a href="#">Menu Item 3</a></li>
+                    <li><a href="#">Menu Item 4</a></li>
+                    <li><a href="#">Menu Item 5</a></li>
+                    <li><a href="#">Menu Item 6</a></li>
+                    <li><a href="#">Menu Item 7</a></li>
+                    <li><a href="#">Menu Item 8</a></li>
+                </ul>
+            </div>
+            <div class="block">
+                <h2>Block</h2>
+                <p>Enter Block content here...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="content">
+                <h2>Gallery</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p>
+            </div>
+            <div class="sub-content">
+            <div class="content">
+                <h2>Subscription</h2>
+                <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ant</p>
+                <a href="#" class="read-more">Read more</a>
+
+            </div>
+            <div class="content">
+                <h2>Other Services</h2>
+                <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ant</p>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            </div>
         </div>
     </div>
-    <section class="main">
-        <nav class="menu">
-            <ul>
-                <li><a class="Active" href="#">Home</a></li>
-                <li><a class="Active" href="#">New Page</a></li>
-                <li><a class="Active" href="#">New Page 2</a></li>
-                <li><a class="Active" href="#">New Page 3</a></li>
-                <li><a class="Active" href="#">New Page 4</a></li>
-                <li><a class="Active" href="#">New Page 5</a></li>
-            </ul>
-        </nav>
-    </section>
-    <section class="content">
-        <section class="top-left-content">
-            <h1>Main Menu</h1>
-            <ul>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 1</a></li>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 2</a></li>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 3</a></li>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 4</a></li>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 5</a></li>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 6</a></li>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 7</a></li>
-                <li><a href="#"><i class="fa-regular fa-clone"></i>Menu item 8</a></li>
-            </ul>
-        </section>     
-        <section class="bottom-left-content">
-            <h1>Block</h1>
-            <p>Enter block content here....
-                
-                Lorem ipsum dolor sit amet,
-                consectetuer adipiscing elit.
-                Aenean commodo lorem ipsum dolor sit amet,
-                consectetuer adipiscing elit.Aenean commodo</p>
-        </section>
-        <section class="top-right-content">
-    
-        <h2>Gallery</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam Felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, ringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper misi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p>
-        </section>
-        
-        <section class="bottom-right-left-content">
-        <h2>Subscription</h2>
-        <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
-            id, lorem. Maecenas nec odio et ant
-        </p>
-      
-        
-        <button type="Read More">Read More</button>
-        
-        <section class="bottom-right-right-content">
-        <h2>Other Services</h2>
-        <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
-            id, lorem. Maecenas nec odio et ant</p>
-        
-        
-            <button type="Read More">Read More</button>
-      
-    </section>
-    <footer class="page-footer">
-        <p>Copyright &copy; 2014.</p>
-    </footer>
-    </section>
+    <div class="footer">
+        <p>Copyright © 2014.</p>
+    </div>
+    </fieldset>
 </body>
 </html>
