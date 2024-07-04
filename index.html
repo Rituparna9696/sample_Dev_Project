@@ -3,197 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Tamplate</title>
+    <style type="text/css">
+        body{
             margin: 0;
             padding: 0;
             background-color: #e0d48a;
+            font-family: Arial, Helvetica, sans-serif;
         }
-       .main-box {
-         margin-top:2% ;
-         margin-bottom:2%;
-         margin-left:10%;
-         margin-right:10%;
-         background-color: #f6edcc;
+        p{
+            font-size: 19px;
         }
-        
-        .header {
-          background-color: #b5d528;
-          padding-top:3% ;
-          padding-bottom: 5%;
-          padding-left: 72% ;
-          border-radius: 15px 15px 15px 15px;
+        #wrapper{
+            margin: 20px auto;
+            width: 1100px;
+            height: auto;
         }
-
-        .nav {
-            background-color: #eae6cb;
-            padding: 10px 0;
-            border: 1px solid rgb(206, 160, 160);
+        #banner{
+            width: 100%;
+            height: 230px;
+            background-image: url(img/banner.png);
+            border: 1px solid #b8ab88;
+        }
+        #banner h1{
+            margin: 0;
+            padding: 9% 13% 0 0;
+            text-align: right;
+            font-size: 42px;
+        }
+        #banner p{
+            margin: 0;
+            padding: 1% 25% 0 0;
+            text-align: right;
+            font-size: 20px;
+        }
+        .main{
+            margin-top: 10px;
+            padding: 12px 14px 0 11px;
+            width: 1076px;
+            height: 870px;
+            background-image: url(img/background.png) ;
+            border: 1px  solid #888585 ;
             border-bottom: none;
+            border-right: none;
         }
-
-        .nav ul {
-            list-style-type: none;
+        .menu{
+            width: 1076px;
+            height: 55px;
+            background-color: #eae6cb;
+            border: 2px solid #b8ab88;
+            border-bottom: none;   
+        }
+        .menu ul{
+            margin: 0;
             padding: 0;
         }
-
-        .nav ul li {
-            display: inline;
-            /* margin-left: 53px; */
-            margin-left: 6%;
-        }
-
-        .nav ul li a {
-            text-decoration: none;
-            color: rgb(14, 56, 14);
-            padding: 5px 15px;
-            font-weight: 550;   
-        }
-
-        .nav ul li a:hover {
-            background-color: #d4c28d;
-        }
-
-        .container {
-            display: flex;
-            padding: 20px;
-        }
-
-        .sidebar {
-            width: 20%;
-        }
-
-        .menu, .block {
-            list-style-image: url(images/icon.png);
-            background-color: #f5e49a;
-            border: #88c238 1px solid;
-            border-radius: 10px 10px 10px 10px;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        .menu h2, .block h2 {
+        .menu ul li{
+            list-style: none;
+            float: left;
+            width: 173px;
+            height: 33px;
             text-align: center;
-            margin: 0 0 10px;
-            background-color: #d2d260;
-            border: 1px;
-            border-color: black;
         }
-
-        .menu ul li {
-            margin-bottom: 5px;
-        }
-
-        .menu ul li a {
+        .menu ul li a{
+            padding: 17px 0 0 0;
+            display: block;
+            color: #224b4b;
             text-decoration: none;
-            color: black;
+            font-size: 20px;
         }
-
-        .menu ul li a:hover {
-            text-decoration: underline;
+        .list{
+            display: grid;
+            grid-template-columns: 1fr ;
+            gap: 10px;
+            padding: 10px;
+        } 
+        .list a {
+            display: flex;
+            align-items: center;
+            color: #224923;
+            font-size: 18px;
         }
-
-        .main-content {
-            width: 80%;
-            padding-left: 20px;
+        .list i {
+            margin-right: 10px;
         }
-        .sub-content{
+        .mother{
             display: flex;
         }
-
-        .content{
-            margin-bottom: 20px;
+        .left-content{
+            margin: 10px;
+            width: 200%;
+            border-right: 1px black solid;       
         }
-
-        .content h2 {
-            margin: 0 0 10px;
-        }
-        .read-more {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #8dc63f;
-            color: #fff;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-        .read-more:hover {
-            background-color: #f87ef2;
-        }
-        .footer {
-            background-color: #94df2d;
-            text-align: center;
+        .left-content h2{
+            background-color: #d2d35e;
+            color: #4b483c;
             padding: 10px;
+            margin-right: 15px;
         }
-
-
-
+        .block p {
+            padding: 10px;
+            font-size: 18px;
+        }
+        .gallery{
+            margin: 40px 10px 10px 10px;
+        }
+         .gallery2{
+            display: flex;
+         }
+         .gallery2 .subscription{
+            margin: 10px 15px 15px 15px;
+         }
+       .gallery2 .other{
+        border-left: 1px #070707 solid;
+        padding: 10px 15px 15px 18px;
+       }
+        .gallery2 .main-button{
+            color: #000000;
+            background-color: #bdda32;
+            border: 1px solid #3c5a34;
+            border-left: none;
+            padding: 12px;
+        }
+        .page-footer{
+            width: 1076px;
+            height: 55px;
+            background-color: #cbde50;
+            text-align: center;
+            padding: 8px 0;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
-    <fieldset class="main-box">
-    <div class="header">
-        <h1>Enter Site Title</h1>
-        <p>Enter Site Slogan</p>
-    </div>
-    <div class="nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Table</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Form</a></li>
-            <li><a href="#">Contact-Us</a></li>
-            
-        </ul>
-    </div>
-    <div class="container">
-        <div class="sidebar">
-            <div class="menu">
-                <h2>Main Menu</h2>
-                
+    <div id="wrapper">
+        <div id="banner">
+            <h1>Enter Site Title</h1>
+            <p>Enter Site Slogan</p>
+        </div>
+        <section class="main">
+            <nav class="menu">
                 <ul>
-                    <li><a href="#">Menu Item 1</a></li>
-                    <li><a href="#">Menu Item 2</a></li>
-                    <li><a href="#">Menu Item 3</a></li>
-                    <li><a href="#">Menu Item 4</a></li>
-                    <li><a href="#">Menu Item 5</a></li>
-                    <li><a href="#">Menu Item 6</a></li>
-                    <li><a href="#">Menu Item 7</a></li>
-                    <li><a href="#">Menu Item 8</a></li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">New Page</a>
+                    </li>
+                    <li>
+                        <a href="#">New Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">New Page 3</a>
+                    </li>
+                    <li>
+                        <a href="#">New Page 4</a>
+                    </li>
+                    <li>
+                        <a href="#">New Page 5</a>
+                    </li>
                 </ul>
-            </div>
-            <div class="block">
-                <h2>Block</h2>
-                
-                <p>Enter Block content here...</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-            </div>
-        </div>
-
-        <div class="main-content">
-            <div class="content">
+            </nav>
+        <section class="mother">  
+        <section class="left-content">
+                <div class="main-menu">
+                    <h2>➤ Main Menu</h2>
+                    <div class="list">
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 1</a>
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 2</a>
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 3</a>
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 4</a>
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 5</a>
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 6</a>
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 7</a>
+                        <a href="#"><i class="fa fa-th" aria-hidden="true"></i>Menu Item 8</a>
+                        </div>
+                </div>
+                <div class="block">
+                    <h2>➤ Block</h2>
+                    <p>Enter Block content here....<br><br>
+                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit Aenean commodo Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                </div>     
+        </section>
+        <section class="right-content">
+            <div class="gallery">
                 <h2>Gallery</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p>
+                <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p>
             </div>
-            <div class="sub-content">
-            <div class="content">
-                <h2>Subscription</h2>
-                <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ant</p>
-                <a href="#" class="read-more">Read more</a>
+            <div class="gallery2">
+                <div class="subscription">
+                    <h2>Subscription</h2>
+                    <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ant</p>
+                    <button class="main-button">Read More</button>
+                </div>
 
+                <div class="other">
+                    <h2>Other Services</h2>
+                    <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ant</p>
+                    <button class="main-button">Read More</button>
+                </div>
             </div>
-            <div class="content">
-                <h2>Other Services</h2>
-                <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ant</p>
-                <a href="#" class="read-more">Read more</a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <p>Copyright © 2014.</p>
-    </div>
-    </fieldset>
+         </section>
+         </section>
+            
+        <footer class="page-footer">
+            <p>Copyright &copy; 2014. <span>By Bithika</span> </p>
+        </footer>
+    </section>
+</div>
 </body>
 </html>
