@@ -1,7 +1,7 @@
 function checkPassword(){
     let password = document.getElementById("password").value;
     let Confirmpassword = document.getElementById("Confirmpassword").value;
-    console.log(password,Confirmpassword);
+    //console.log(password,Confirmpassword);
     let message = document.getElementById("message");
     if(password.length < 6){
         document.getElementById("password").innerHTML="password is weak";
