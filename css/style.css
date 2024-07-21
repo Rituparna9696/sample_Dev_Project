@@ -19,10 +19,16 @@
     background-color: #363636;
 }
 .page-footer{
-    padding-left: 27px;
+    padding-left: 100px;
     text-decoration: solid;
     padding-top: 30px;
 }
 .jumbotron .btn{
-    background-color: #2b2bf8;
+    background-color: #4d4df7;
+}
+.jumbotron{
+    padding-left: 100px;
+}
+.container-fluid{
+    padding-left: 100px;
 }
